@@ -148,6 +148,7 @@ html {
 width: 80vw;
 margin-left: auto;
 margin-right: auto;
+text-align: center;
 }
 
 
@@ -161,24 +162,24 @@ margin-right: auto;
     height: 5vh;
 }
 #menu{
-    display: table;
-    height: auto;
+  
+    display: inline;
     margin-left: auto;
     margin-right: auto;
     animation: fadeIn 3s;
    
 }
+#menuItem
+{
+  display: inherit;
+  font-size:5vh;    
+  margin-left: 1vw;
+  margin-right: 1vw;
 
-#menuItem1{
-    font-size:5vh;   
-    float: left;
-    width: 20vw;
-    height: 5vh;
-    text-align: center;
-    animation: slideInRight 3s;
-   
 }
-
+#menuSlide{
+  animation: slideInRight 3s;
+}
 #whoPicture img{
   max-height: 30vh; 
   width: auto;
@@ -196,31 +197,6 @@ margin-right: auto;
   overflow: auto;
 }
 
-#menuItem2{
-    font-size:5vh;  
-    float: left;
-    width: 20vw;
-    height: 5vh;
-    text-align: center;
-    animation: slideInRight 3s;
-}
-
-#menuItem3{
-    font-size:5vh;   
-    float: left;
-    text-align: center;
-    width: 20vw;
-    height: 5vh;
-    animation: slideInRight 3s;
-}
-#menuItem4{
-  font-size:5vh;   
-  float: left;
-  text-align: center;
-  width: 20vw;
-  height: 5vh;
-  animation: slideInRight 3s;
-}
 
 
 .resp-container {
