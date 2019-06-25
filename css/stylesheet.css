@@ -182,22 +182,23 @@ text-align: center;
 }
 #whoPicture img{
   max-height: 30vh; 
-  width: auto;
-  float: left;
-  margin-right: 3vw;
+  
+  margin: 1vw;
+
 }
 
 #whoContent{
-  float: left;
-  width: 55vw;
+ 
   text-align: justify;
   text-justify: inter-word;
-  max-height: 30vh;
-  font-size: 3vh;
-  overflow: auto;
+  font-size: 2vh;
+
 }
 
-
+#cardContainer{ width: 80vw;}
+#cardContainer img{
+  float: left;
+}
 
 .resp-container {
  
