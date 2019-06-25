@@ -1,0 +1,283 @@
+
+
+html {
+  scroll-behavior: smooth;
+  font-family: "-apple-system", "system-ui", sans-serif;
+}
+
+#hamburgerMenu a
+{
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+#hamburgerMenu a:hover
+{
+  color: white;
+}
+
+#hamburgerMenuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+
+#hamburgerMenuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background:black;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#hamburgerMenuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#hamburgerMenuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#hamburgerMenuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#hamburgerMenuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#hamburgerMenuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#hamburgerMenuToggle{
+  display: none;
+}
+
+#hamburgerMenu
+{
+  position: absolute;
+  height: 25vh;
+  width: 100vw;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  opacity: 0.7;
+  background: black;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate( 0,-100%);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#hamburgerMenu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#hamburgerMenuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+
+ #page{
+  height: 100vh;
+  width: 100vw;
+ }
+
+
+ a {
+  text-decoration: none;
+  color: #000;
+}
+
+#PageTitle{
+  font-size: 2vw;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom:5vh;
+}
+#mainLogo img {
+    max-height: 80vh; 
+    max-width: 100vw;
+    display: block;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    animation: bounceIn 5s ;  
+}
+
+#frame{
+width: 80vw;
+margin-left: auto;
+margin-right: auto;
+}
+
+
+#backButton
+{
+  font-size: 5vh;
+  text-align: center;
+  
+}
+#whiteSpace{
+    height: 5vh;
+}
+#menu{
+    display: table;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 3s;
+   
+}
+
+#menuItem1{
+    font-size:5vh;   
+    float: left;
+    width: 20vw;
+    height: 5vh;
+    text-align: center;
+    animation: slideInRight 3s;
+   
+}
+
+#whoPicture img{
+  max-height: 30vh; 
+  width: auto;
+  float: left;
+  margin-right: 3vw;
+}
+
+#whoContent{
+  float: left;
+  width: 55vw;
+  text-align: justify;
+  text-justify: inter-word;
+  max-height: 30vh;
+  font-size: 3vh;
+  overflow: auto;
+}
+
+#menuItem2{
+    font-size:5vh;  
+    float: left;
+    width: 20vw;
+    height: 5vh;
+    text-align: center;
+    animation: slideInRight 3s;
+}
+
+#menuItem3{
+    font-size:5vh;   
+    float: left;
+    text-align: center;
+    width: 20vw;
+    height: 5vh;
+    animation: slideInRight 3s;
+}
+#menuItem4{
+  font-size:5vh;   
+  float: left;
+  text-align: center;
+  width: 20vw;
+  height: 5vh;
+  animation: slideInRight 3s;
+}
+
+@media only screen and (max-width: 800px) {
+  #menu {
+   display: none;
+  }
+  #hamburgerMenuToggle{display: block;}
+}
+
+
+@keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    0% {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    20% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1);
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+  
+    40% {
+      -webkit-transform: scale3d(0.9, 0.9, 0.9);
+      transform: scale3d(0.9, 0.9, 0.9);
+    }
+  
+    60% {
+      opacity: 1;
+      -webkit-transform: scale3d(1.03, 1.03, 1.03);
+      transform: scale3d(1.03, 1.03, 1.03);
+    }
+  
+    80% {
+      -webkit-transform: scale3d(0.97, 0.97, 0.97);
+      transform: scale3d(0.97, 0.97, 0.97);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  .bounceIn {
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-name: bounceIn;
+    animation-name: bounceIn;
+  }
